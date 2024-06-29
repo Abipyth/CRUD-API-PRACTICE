@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIEW</title>
+</head>
+<body>
+
+    <center>
+        <h1>PRODUCT VIEW PAGE</h1>
+        <form action="/pview">
+  
+
+            <Table border="3">
+                <thead>
+                    <tr>
+                        <th>SI NO</th>
+                        <th>NAME</th>
+                        <th>DESCRIPTION</th>
+                        <th>UPDATE</th>
+                        <th>DELETE</th>
+                    </tr>
+                </thead>
+                {% for i in data %}
+                <tbody>
+                    <tr>
+                        <th>{{forloop.counter}}</th>
+                        <th>{{i.name}}</th>
+                        <th>{{i.desc}}</th>
+                        <th><a href="/update/{{i.id}}">UPDATE</a></th>
+                        <th><a href="/delete/{{i.id}}">DELETE</a></th>
+                    </tr>
+                </tbody>
+                {% endfor %}
+            </Table>
+        </form>
+    </center>
+    
+</body>
+</html>

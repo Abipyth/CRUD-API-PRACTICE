@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPDATE</title>
+</head>
+<body>
+    <center>
+        <H1>PRODUCT UPDATE FOERM </H1>
+        <form action="/update/{{data.id}}" method="POST">
+
+            {% csrf_token %}
+
+            <input type="text" name="name" value="{{data.name}}"> <br> <br> 
+
+            <input type="text" name="desc" value="{{data.desc}}"> <br> <br> 
+
+            <input type="submit" value="UPDATE"><br> <br> 
+
+        </form>
+    </center>
+    
+</body>
+</html>
